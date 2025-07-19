@@ -6,7 +6,7 @@ const btnAdicionar = document.querySelector("#adicionar");
 const btnLimpar = document.querySelector("#limpar");
 
 btnLimpar.addEventListener('click', limparItensDeLista);
-btnAdicionar.addEventListener('click', adicionaEntradaLista)
+btnAdicionar.addEventListener('click', adicionaNaLista)
 
 atualizarLista();
 
@@ -25,8 +25,9 @@ function limparItensDeLista() {
   atualizarLista();
 }
 
-function adicionaEntradaLista() {
-  let entrada = pEntrada.textContent
-  adicionaItemLista(entrada)
-  atualizarLista()
+function adicionaNaLista() {
+  let entrada = pEntrada.textContent;
+  adicionaItemLista(entrada);
+  atualizarLista();
+  pEntrada.innerHTML = "";
 }
